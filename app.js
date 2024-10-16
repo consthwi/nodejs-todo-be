@@ -9,7 +9,7 @@ console.log("mongouri", MONGODB_URI_PROD);
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({ origin: "https://hwi-todo-app.netlify.app" }));
 
 // app에 항상 router세팅... 그래서 exports하는거
 app.use("/api", indexRouter);
